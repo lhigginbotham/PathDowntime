@@ -9,20 +9,20 @@
 
 class Room
 {
-    public:
-        std::vector<int> earnings;
-        Room(std::string name, std::string benefit, std::vector<int> earnings, std::vector<int> cost, int time, int minSize, int maxSize);
-        virtual ~Room();
-        std::string getName();
+	public:
+		std::vector<int> earnings;
+		Room(std::string name, std::string benefit, std::vector<int> earnings, std::vector<int> cost, int time, int minSize, int maxSize);
+		virtual ~Room();
+		std::string getName();
 
-    protected:
-    private:
-        std::string name;
-        std::string benefit;
-        std::vector<int> cost;
-        int time;
-        int minSize;
-        int maxSize;
+	protected:
+	private:
+		std::string name;
+		std::string benefit;
+		std::vector<int> cost;
+		int time;
+		int minSize;
+		int maxSize;
 };
 
 #endif // ROOM_H
