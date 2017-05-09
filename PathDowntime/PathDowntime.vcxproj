@@ -118,11 +118,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\core\Organization.cpp" />
+    <ClCompile Include="src\core\Character.cpp" />
     <ClCompile Include="src\core\Building.cpp" />
     <ClCompile Include="src\core\main.cpp" />
     <ClCompile Include="src\core\Room.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\core\Organization.h" />
+    <ClInclude Include="src\core\Character.h" />
     <ClInclude Include="src\core\Building.h" />
     <ClInclude Include="src\core\Constants.h" />
     <ClInclude Include="src\core\Room.h" />
