@@ -36,9 +36,9 @@ void Building::addRoom(Room room)
 std::vector<int> Building::passTime(std::vector<Room> rooms, bool local, int days, IncomeType type)
 {
 	//TODO: Pull out all the resource depreciation from this system
-	std::vector<int> earnings = { 0, 0, 0, 0, 0 };
-	earnings = calculateEarnings(days, type);
-	return earnings;
+	std::vector<int> earningsBonus = { 0, 0, 0, 0, 0 };
+	earningsBonus = calculateEarnings(days, type);
+	return earningsBonus;
 }
 
 
@@ -55,7 +55,7 @@ void Building::calculateIncome(std::vector<Room> rooms)
 		{
 			for(int i = 0; i < static_cast<int>(IncomeType::NUM_OF_INCOME_TYPE); i++)
 			{
-				sumEarnings[i] += room.earnings[i];
+				sumEarnings[i] += room.earningsBonus[i];
 			}
 		}
 	}
@@ -70,10 +70,10 @@ void Building::calculateIncome(std::vector<Room> rooms)
 /// <returns></returns>
 std::vector<int> Building::calculateEarnings(int time, IncomeType type)
 {
-	std::vector<int> earnings = { 0, 0, 0, 0, 0 };
+	std::vector<int> earningsBonus = { 0, 0, 0, 0, 0 };
 	for (int i = 0; i < time; i++)
 	{
-		earnings[static_cast<int>(type)] += income[static_cast<int>(type)];
+		earningsBonus[static_cast<int>(type)] += income[static_cast<int>(type)];
 	}
-	return earnings;
+	return earningsBonus;
 }
