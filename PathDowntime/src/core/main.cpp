@@ -1,4 +1,4 @@
-/**
+ /**
 	Hello future me. The reason that you choose to use vectors for the earnings and income despite the fact that it seems like they would be better there design wise
 	is because you can't initialize arrays of the appropriate size without using magic numbers in the class constructors and you wanted to use strongly typed enums.
 	Don't try it, it doesn't work. Seriously.
