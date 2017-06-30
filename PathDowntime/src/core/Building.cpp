@@ -10,6 +10,11 @@ Building::Building(std::string name, std::vector<int> income, std::vector<Room> 
 
 }
 
+Building::Building(std::string name, std::vector<int> income, std::vector<Manager> managers, std::vector<Room> rooms) : name(name), income(income), managers(managers), rooms(rooms)
+{
+
+}
+
 Building::Building(std::string name, std::vector<Room> rooms) : name(name), rooms(rooms)
 {
 	calculateIncome(rooms);
@@ -76,4 +81,14 @@ std::vector<int> Building::calculateEarnings(int time, IncomeType type)
 		earningsBonus[static_cast<int>(type)] += income[static_cast<int>(type)];
 	}
 	return earningsBonus;
+}
+
+int Building::calculateUpkeep() noexcept
+{
+	int upkeep = 0;
+	for (auto manager : this->managers)
+	{
+		upkeep += manager.wage;
+	}
+	return upkeep;
 }

@@ -24,4 +24,8 @@
 
 #endif UPKEEP_H_
 
-int determineCost()
+int determineUpkeep(Character player);
+bool payCosts(Character player, const unsigned int costs);
+int calculateCapitalAttrition(const unsigned int daysAway);
+void applyAttrition(Character player, const unsigned int attrition);
+bool determineBuisnessAttrition(const unsigned int daysAway);

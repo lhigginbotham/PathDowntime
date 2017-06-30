@@ -8,11 +8,12 @@ class Organization
 	public:
 		Organization();
 		~Organization();
+		std::vector<Building> buildings;
+		std::string location;
+		void applyCapitalAttrition(const unsigned int deduction);
 	private:
 		std::string name;
-		std::string location;
 		std::vector<int> assets;
-		std::vector<Building> buildings;
 };
 
 #endif

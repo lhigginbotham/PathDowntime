@@ -4,3 +4,8 @@ Manager::Manager(std::string name, int wage, std::vector<std::string> skills, st
 {
 
 }
+
+Manager::~Manager()
+{
+
+}
